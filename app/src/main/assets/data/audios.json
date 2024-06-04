@@ -1,0 +1,1110 @@
+[
+  {
+    "audio": "asmr_sponge.ogg",
+    "name": "Sponge",
+    "image": "thumb_asmr_sponge_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_nail.ogg",
+    "name": "Nail",
+    "image": "thumb_asmr_nail_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_keyboard.ogg",
+    "name": "Keyboard",
+    "image": "thumb_asmr_keyboard_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_click.ogg",
+    "name": "Click",
+    "image": "thumb_asmr_click_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_crack.ogg",
+    "name": "Crack",
+    "image": "thumb_asmr_crack_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_rub.ogg",
+    "name": "Rub",
+    "image": "thumb_asmr_rub_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_vibration.ogg",
+    "name": "Vibration",
+    "image": "thumb_asmr_vibration_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_brush.ogg",
+    "name": "Brush",
+    "image": "thumb_asmr_brush_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_zip.ogg",
+    "name": "ZIP",
+    "image": "thumb_asmr_zip_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_pouring.ogg",
+    "name": "Pouring",
+    "image": "thumb_asmr_pouring_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_writing.ogg",
+    "name": "Writing",
+    "image": "thumb_asmr_writing_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_flip_page.ogg",
+    "name": "Flip page",
+    "image": "thumb_asmr_flip_page_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_drink.ogg",
+    "name": "Drink",
+    "image": "thumb_asmr_drink_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_crushed.ogg",
+    "name": "Crushed",
+    "image": "thumb_asmr_crushed_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_scratch.ogg",
+    "name": "Scratch",
+    "image": "thumb_asmr_scratch_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_sweeping.ogg",
+    "name": "Sweeping",
+    "image": "thumb_asmr_sweeping_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_bubbles.ogg",
+    "name": "Bubbles",
+    "image": "thumb_asmr_bubbles_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_rustling.ogg",
+    "name": "Rustling",
+    "image": "thumb_asmr_rustling_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_orbeez.ogg",
+    "name": "Orbeez",
+    "image": "thumb_asmr_orbeez_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_candle.ogg",
+    "name": "Candle",
+    "image": "thumb_asmr_candle_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_beer_bubble.ogg",
+    "name": "Beer Bubble",
+    "image": "thumb_asmr_beer_bubble_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_eating.ogg",
+    "name": "Eating",
+    "image": "thumb_asmr_eating_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_erar_cleaning.ogg",
+    "name": "Ear cleaning",
+    "image": "thumb_asmr_erar_cleaning_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_mic_scratching.ogg",
+    "name": "Mic scratching",
+    "image": "thumb_asmr_mic_scratching_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_ice_eating.ogg",
+    "name": "Ice Eating",
+    "image": "thumb_asmr_ice_eating_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_ice_cubes.ogg",
+    "name": "Ice cubes",
+    "image": "thumb_asmr_ice_cubes_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "asmr_ice_in_water.ogg",
+    "name": "Ice in water",
+    "image": "thumb_asmr_ice_in_water_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "animal_cow.ogg",
+    "name": "Cow",
+    "image": "thumb_animal_cow_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_yak.ogg",
+    "name": "Yak",
+    "image": "thumb_animal_yak_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_butterfly.ogg",
+    "name": "Butterfly",
+    "image": "thumb_animal_butterfly_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_scorpion.ogg",
+    "name": "Scorpion",
+    "image": "thumb_animal_scorpion_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_dove.ogg",
+    "name": "Dove",
+    "image": "thumb_animal_dove_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_penguins.ogg",
+    "name": "Penguins",
+    "image": "thumb_animal_penguins_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_eagle.ogg",
+    "name": "Eagle",
+    "image": "thumb_animal_eagle_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_rat.ogg",
+    "name": "Rat",
+    "image": "thumb_animal_rat_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_guinea_pig.ogg",
+    "name": "Guinea pig",
+    "image": "thumb_animal_guinea_pig_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_dog.ogg",
+    "name": "Dog",
+    "image": "thumb_animal_dog_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_ferrets.ogg",
+    "name": "Ferrets",
+    "image": "thumb_animal_ferrets_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_kittens.ogg",
+    "name": "Kittens",
+    "image": "thumb_animal_kittens_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_owl.ogg",
+    "name": "Owl",
+    "image": "thumb_animal_owl_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_sheep.ogg",
+    "name": "Sheep",
+    "image": "thumb_animal_sheep_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_bat.ogg",
+    "name": "Bat",
+    "image": "thumb_animal_bat_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_hen.ogg",
+    "name": "Hens",
+    "image": "thumb_animal_hen_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_rooster.ogg",
+    "name": "Rooster",
+    "image": "thumb_animal_rooster_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_turkey.ogg",
+    "name": "Turkey",
+    "image": "thumb_animal_turkey_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_horse_gallop.ogg",
+    "name": "Horse Gallop",
+    "image": "thumb_animal_horse_gallop_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_pig.ogg",
+    "name": "Pig",
+    "image": "thumb_animal_pig_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_pigeon.ogg",
+    "name": "Pigeon",
+    "image": "thumb_animal_pigeon_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_horse.ogg",
+    "name": "Horse",
+    "image": "thumb_animal_horse_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_bee.ogg",
+    "name": "Bee",
+    "image": "thumb_animal_bee_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_crows.ogg",
+    "name": "Crows",
+    "image": "thumb_animal_crows_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_rattlesnake.ogg",
+    "name": "Rattlesnake",
+    "image": "thumb_animal_rattlesnake_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_lion.ogg",
+    "name": "Lion",
+    "image": "thumb_animal_lion_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_monkey.ogg",
+    "name": "Monkey",
+    "image": "thumb_animal_monkey_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_goat.ogg",
+    "name": "Goat",
+    "image": "thumb_animal_goat_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_wolf.ogg",
+    "name": "Wolf",
+    "image": "thumb_animal_wolf_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_fly.ogg",
+    "name": "Fly",
+    "image": "thumb_animal_fly_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "animal_songbird.ogg",
+    "name": "Songbird",
+    "image": "thumb_animal_songbird_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 20000
+  },
+  {
+    "audio": "house_baby_cry.ogg",
+    "name": "Baby Cry",
+    "image": "thumb_house_baby_cry_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "house_baby_laughing.ogg",
+    "name": "Baby Laughing",
+    "image": "thumb_house_baby_laughing_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "house_cat_purr.ogg",
+    "name": "Cat Purr",
+    "image": "thumb_house_cat_purr_svg",
+    "isPremium": true,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_clock.ogg",
+    "name": "Clock",
+    "image": "thumb_house_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 500,
+    "maxTimeSilence": 500
+  },
+  {
+    "audio": "house_fan.ogg",
+    "name": "Fan",
+    "image": "thumb_house_fan_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_hairdryer.ogg",
+    "name": "Hairdryer",
+    "image": "thumb_house_hairdryer_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_microwave.ogg",
+    "name": "Microwave",
+    "image": "thumb_house_microwave_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_shower.ogg",
+    "name": "Shower",
+    "image": "thumb_house_shower_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_washing_machine.ogg",
+    "name": "Washing Machine",
+    "image": "thumb_house_washing_machine_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_radio.ogg",
+    "name": "Radio",
+    "image": "thumb_house_radio_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_door.ogg",
+    "name": "Door",
+    "image": "thumb_house_door_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "house_creaking.ogg",
+    "name": "Creaking",
+    "image": "thumb_house_creaking_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "house_sneeze.ogg",
+    "name": "Sneeze",
+    "image": "thumb_house_sneeze_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "house_cough.ogg",
+    "name": "Cough",
+    "image": "thumb_house_cough_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "house_breathe.ogg",
+    "name": "Breathe",
+    "image": "thumb_house_breathe_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 10000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "meditation_bowls.ogg",
+    "name": "Bowls",
+    "image": "thumb_meditation_bowls_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_chimes.ogg",
+    "name": "Chimes",
+    "image": "thumb_meditation_chimes_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_flute.ogg",
+    "name": "Flute",
+    "image": "thumb_meditation_flute_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_gongs.ogg",
+    "name": "Gongs",
+    "image": "thumb_meditation_gongs_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_guitar.ogg",
+    "name": "Guitar",
+    "image": "thumb_meditation_guitar_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_harp.ogg",
+    "name": "Harp",
+    "image": "thumb_meditation_harp_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_piano.ogg",
+    "name": "Piano",
+    "image": "thumb_meditation_piano_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_music_box.ogg",
+    "name": "Musix box",
+    "image": "thumb_meditation_music_box_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_violin.ogg",
+    "name": "Violin",
+    "image": "thumb_meditation_violin_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "meditation_bass.ogg",
+    "name": "Bass",
+    "image": "thumb_meditation_bass_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_bird.ogg",
+    "name": "Bird",
+    "image": "thumb_natural_bird_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_river.ogg",
+    "name": "River",
+    "image": "thumb_natural_river_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_waterfall.ogg",
+    "name": "Waterfall",
+    "image": "thumb_natural_waterfall_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_wind.ogg",
+    "name": "Wind",
+    "image": "thumb_natural_wind_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_storm.ogg",
+    "name": "Storm",
+    "image": "thumb_natural_storm_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_fire.ogg",
+    "name": "Fire",
+    "image": "thumb_natural_fire_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_volcano.ogg",
+    "name": "Volcano",
+    "image": "thumb_natural_volcano_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_fish.ogg",
+    "name": "Fish",
+    "image": "thumb_natural_fish_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_night_forest.ogg",
+    "name": "Night Forest",
+    "image": "thumb_natural_night_forest_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_meadow.ogg",
+    "name": "Meadow",
+    "image": "thumb_natural_meadow_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_snow_mountain.ogg",
+    "name": "Snow Mountain",
+    "image": "thumb_natural_snow_mountain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_thunder.ogg",
+    "name": "Thunder",
+    "image": "thumb_natural_thunder_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_campfire.ogg",
+    "name": "Campfire",
+    "image": "thumb_natural_campfire_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_rustling_leaves.ogg",
+    "name": "Rustling leaves",
+    "image": "thumb_natural_rustling_leaves_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "natural_rain.ogg",
+    "name": "Rain",
+    "image": "thumb_natural_rain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "scrifi_ufo.ogg",
+    "name": "UFO",
+    "image": "thumb_scrifi_ufo_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "scrifi_computer_beeps.ogg",
+    "name": "Computer Beeps",
+    "image": "thumb_scrifi_computer_beeps_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "scrifi_space_signal.ogg",
+    "name": "Space signal",
+    "image": "thumb_scrifi_space_signal_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "scrifi_space_shuttle.ogg",
+    "name": "Space Shuttle",
+    "image": "thumb_scrifi_space_shuttle_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "scrifi_server_room.ogg",
+    "name": "Server Room",
+    "image": "thumb_scrifi_server_room_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "scrifi_laser_gun.ogg",
+    "name": "Laser gun",
+    "image": "thumb_scrifi_laser_gun_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_waves.ogg",
+    "name": "Waves",
+    "image": "thumb_water_waves_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_heavy_rain.ogg",
+    "name": "Heavy Rain",
+    "image": "thumb_water_heavy_rain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_light_rain.ogg",
+    "name": "Light Rain",
+    "image": "thumb_water_light_rain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_morning_rain.ogg",
+    "name": "Moring Rain",
+    "image": "thumb_water_morning_rain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_pour_water.ogg",
+    "name": "Pour Water",
+    "image": "thumb_water_pour_water_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_rain_on_roof.ogg",
+    "name": "Rain On Roof",
+    "image": "thumb_water_rain_on_roof_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_rain_on_window.ogg",
+    "name": "Rain On Window",
+    "image": "thumb_water_rain_on_window_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_rain_under_umbrella.ogg",
+    "name": "Rain Under Umbrella",
+    "image": "thumb_water_rain_under_umbrella_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_running_water.ogg",
+    "name": "Running Water",
+    "image": "thumb_water_running_water_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_drops.ogg",
+    "name": "Water Drops",
+    "image": "thumb_water_drops_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_lapping_wind.ogg",
+    "name": "Water Lapping Wind",
+    "image": "thumb_water_lapping_wind_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_leak.ogg",
+    "name": "Water Leak",
+    "image": "thumb_water_leak_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "water_lake.ogg",
+    "name": "Lake",
+    "image": "thumb_water_lake_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_television.ogg",
+    "name": "Television",
+    "image": "thumb_white_noise_television_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_engine_room.ogg",
+    "name": "Engine Room",
+    "image": "thumb_white_noise_engine_room_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 500
+  },
+  {
+    "audio": "white_noise_wind_hum.ogg",
+    "name": "Wind hum",
+    "image": "thumb_white_noise_wind_hum_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_radio_noise.ogg",
+    "name": "Radio Noise",
+    "image": "thumb_white_noise_radio_noise_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_microphone.ogg",
+    "name": "Microphone",
+    "image": "thumb_white_noise_microphone_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 20000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "white_noise_underwater.ogg",
+    "name": "Underwater",
+    "image": "thumb_white_noise_underwater_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_electricity.ogg",
+    "name": "Electricity",
+    "image": "thumb_white_noise_electricity_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_vacuum.ogg",
+    "name": "Vacuum",
+    "image": "thumb_white_noise_vacuum_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "white_noise_air_conditioner.ogg",
+    "name": "Air Conditioner",
+    "image": "thumb_white_noise_air_conditioner_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 500
+  },
+  {
+    "audio": "life_train.ogg",
+    "name": "Train",
+    "image": "thumb_life_train_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 20000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "life_airport.ogg",
+    "name": "Airport",
+    "image": "thumb_life_airport_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 20000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "life_farm.ogg",
+    "name": "Farm",
+    "image": "thumb_life_farm_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_spring_rain.ogg",
+    "name": "Spring Rain",
+    "image": "thumb_life_spring_rain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_highway.ogg",
+    "name": "Highway",
+    "image": "thumb_life_highway_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_downtown.ogg",
+    "name": "Downtown",
+    "image": "thumb_life_downtown_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_bell.ogg",
+    "name": "Bell",
+    "image": "thumb_life_bell_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_railway.ogg",
+    "name": "Railway",
+    "image": "thumb_life_railway_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_restaurant.ogg",
+    "name": "Restaurant",
+    "image": "thumb_life_restaurant_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_fishing_village.ogg",
+    "name": "Fishing Village",
+    "image": "thumb_life_fishing_village_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_driving_in_rain.ogg",
+    "name": "Driving in rain",
+    "image": "thumb_life_driving_in_rain_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_foghorn.ogg",
+    "name": "Foghorn",
+    "image": "thumb_life_foghorn_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 20000,
+    "maxTimeSilence": 30000
+  },
+  {
+    "audio": "life_factory.ogg",
+    "name": "Factory",
+    "image": "thumb_life_factory_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_crowd.ogg",
+    "name": "Crowd",
+    "image": "thumb_life_crowd_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "life_grandfather_clock.ogg",
+    "name": "Grandfather's clock",
+    "image": "thumb_life_grandfather_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0,
+    "minSilenceTime": 500,
+    "maxTimeSilence": 500
+  },
+  {
+    "audio": "brainwaves_40hz_concentration.ogg",
+    "name": "Concentration",
+    "image": "thumb_life_grandfather_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "brainwaves_14hz_program_solving.ogg",
+    "name": "Program-solving",
+    "image": "thumb_life_grandfather_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  },
+  {
+    "audio": "brainwaves_10hz_relaxation.ogg",
+    "name": "Relaxation",
+    "image": "thumb_life_grandfather_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 1000
+  },
+  {
+    "audio": "brainwaves_6hz_deeply_relaxed.ogg",
+    "name": "Deeply relaxed",
+    "image": "thumb_life_grandfather_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 1000
+  },
+  {
+    "audio": "brainwaves_3hz_sleep.ogg",
+    "name": "Sleep",
+    "image": "thumb_life_grandfather_clock_svg",
+    "isPremium": false,
+    "offsetTimeToLoop": 0
+  }
+]
