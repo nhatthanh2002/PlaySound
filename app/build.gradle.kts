@@ -45,6 +45,15 @@ android {
 dependencies {
     implementation ("com.google.code.gson:gson:2.10.1")
     implementation("com.google.dagger:hilt-android:2.44")
+    implementation("androidx.fragment:fragment-ktx:1.7.1")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
+    // Lifecycle
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     // Hilt testing dependencies
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.44")

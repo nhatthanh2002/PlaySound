@@ -5,8 +5,9 @@ import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
+import dagger.hilt.android.HiltAndroidApp
 import java.nio.channels.Channel
-
+@HiltAndroidApp
 class MyApplication : Application() {
     companion object {
         const val CHANNEL_ID: String = "channel_play_audio"

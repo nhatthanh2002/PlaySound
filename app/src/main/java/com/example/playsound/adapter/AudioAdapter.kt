@@ -16,6 +16,7 @@ class AudioAdapter(val onClickItem: (AudioModel) -> Unit) :
         fun bind(model: AudioModel) {
             binding.audio = model
             binding.itemLayout.setOnClickListener {
+                it.isActivated = false
                 onClickItem.invoke(model)
             }
         }

@@ -29,16 +29,69 @@
             app:tabTextColor="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvData"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
-            app:spanCount="4"
-            android:id="@+id/rvData"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/layoutControlAudio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            app:spanCount="4" />
+
+        <RelativeLayout
+            android:id="@+id/layoutControlAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+            app:layout_constraintTop_toBottomOf="@id/rvData">
+
+            <TextView
+                android:id="@+id/tvNameAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="name audio" />
+
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameAudio"
+                android:layout_marginTop="3dp"
+                tools:text="number audio" />
+
+            <ImageView
+                android:id="@+id/ivPlayOrPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@id/ivClose"
+                android:src="@drawable/ic_circle_play"
+                android:tint="@color/black"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/black"
+                tools:ignore="UseAppTint" />
+        </RelativeLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
