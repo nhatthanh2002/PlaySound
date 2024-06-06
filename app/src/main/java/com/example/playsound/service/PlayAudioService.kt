@@ -5,9 +5,11 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.res.AssetFileDescriptor
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.IBinder
+import android.util.Log
 import android.widget.RemoteViews
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
@@ -43,10 +45,11 @@ class PlayAudioService : Service() {
 
     private val serviceJob = Job()
     private val serviceScope = CoroutineScope(Dispatchers.Main + serviceJob)
-
-    private var mediaPlayer: MediaPlayer? = null
     private var isPlayingAudio: Boolean = false
     private var mAudioModel: AudioModel? = null
+
+    private val listNameAudio = ArrayList<String>()
+    private val listMediaPlayer = ArrayList<MediaPlayer>()
     override fun onBind(intent: Intent?): IBinder? {
         return null
     }
@@ -63,14 +66,11 @@ class PlayAudioService : Service() {
         }
         val audioModel = intent?.getParcelableExtra<AudioModel>(AUDIO_MODEL)
         if (audioModel != null) {
+            listNameAudio.add(audioModel.audio)
             mAudioModel = audioModel
-        }
-
-        if (mAudioModel != null) {
             serviceScope.launch {
-                startAudio(mAudioModel!!)
+                startAllAudio()
             }
-            sendNotification(mAudioModel!!)
         }
         val actionAudio = intent?.getIntExtra(ACTION_AUDIO, 0)
         actionAudio?.let { handleActionAudio(it) }
@@ -79,34 +79,37 @@ class PlayAudioService : Service() {
     }
 
 
-    private suspend fun startAudio(audioModel: AudioModel) {
-        if (mediaPlayer != null) {
-            mediaPlayer?.reset()
-            mediaPlayer?.release()
-            mediaPlayer = null
+    private suspend fun startAllAudio() {
+        listMediaPlayer.forEach { mediaPlayer ->
+            mediaPlayer.reset()
+            mediaPlayer.release()
         }
-        mediaPlayer = MediaPlayer()
-        withContext(Dispatchers.IO) {
-            try {
-                val afd = assets.openFd("audio/${audioModel.audio}")
-                mediaPlayer?.apply {
-                    setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
-                    afd.close()
-                    isLooping = true
-                    prepare()
-                    withContext(Dispatchers.Main) {
-                        start()
-                        isPlayingAudio = true
-                        sendActionToActivity(ACTION_START)
-                    }
-                }
+        listMediaPlayer.clear()
 
-            } catch (e: IOException) {
-                e.printStackTrace()
+        withContext(Dispatchers.IO) {
+            listNameAudio.forEach { audioName ->
+                try {
+                    val mediaPlayer = MediaPlayer()
+                    val afd = assets.openFd("audio/${audioName}")
+                    mediaPlayer.apply {
+                        setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
+                        afd.close()
+                        isLooping = true
+                        prepare()
+                        start()
+                    }
+                    listMediaPlayer.add(mediaPlayer)
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+            }
+            withContext(Dispatchers.Main) {
+                isPlayingAudio = true
+                mAudioModel?.let { sendNotification(it) }
+                sendActionToActivity(ACTION_START)
             }
         }
     }
-
 
     private fun handleActionAudio(action: Int) {
         when (action) {
@@ -126,8 +129,8 @@ class PlayAudioService : Service() {
     }
 
     private fun resumeAudio() {
-        if (mediaPlayer != null && !isPlayingAudio) {
-            mediaPlayer?.start()
+        if (!isPlayingAudio) {
+            listMediaPlayer.forEach { it.start() }
             isPlayingAudio = true
             sendActionToActivity(ACTION_RESUME)
             mAudioModel?.let { sendNotification(it) }
@@ -135,8 +138,8 @@ class PlayAudioService : Service() {
     }
 
     private fun pauseAudio() {
-        if (mediaPlayer != null && isPlayingAudio) {
-            mediaPlayer?.pause()
+        if (isPlayingAudio) {
+            listMediaPlayer.forEach { it.pause() }
             isPlayingAudio = false
             sendActionToActivity(ACTION_PASSE)
             mAudioModel?.let { sendNotification(it) }
@@ -154,6 +157,7 @@ class PlayAudioService : Service() {
             setTextViewText(R.id.tvNameAudioNoti, audioModel.audio)
             setTextViewText(R.id.tvNumber, "8 item")
             setImageViewResource(R.id.ivPlayOrPause, R.drawable.ic_circle_pause)
+
 
             if (isPlayingAudio) {
                 setOnClickPendingIntent(
@@ -202,6 +206,7 @@ class PlayAudioService : Service() {
         val intent = Intent(SEND_DATA_TO_ACTIVITY).apply {
             putExtra(OBJECT_AUDIO, mAudioModel)
             putExtra(IS_PLAY_AUDIO, isPlayingAudio)
+            Log.e("IS_PLAY_AUDIO", isPlayingAudio.toString())
             putExtra(AUDIO_ACTION_SERVICE, action)
         }
         LocalBroadcastManager.getInstance(applicationContext).sendBroadcast(intent)
@@ -209,8 +214,8 @@ class PlayAudioService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        mediaPlayer?.release()
-        mediaPlayer = null
+        listMediaPlayer.forEach { it.release() }
+        listMediaPlayer.clear()
         serviceJob.cancel()
     }
 }

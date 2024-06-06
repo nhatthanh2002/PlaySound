@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -100,24 +101,10 @@ class PlaySoundFragment : Fragment() {
 
     private fun setStatusPlayOrPause() {
         binding.apply {
-            layoutControlAudio.apply {
-                if (isPlayAudio) {
-                    ivPlayOrPause.setImageResource(R.drawable.ic_circle_pause)
-                } else {
-                    ivPlayOrPause.setImageResource(R.drawable.ic_circle_play)
-                }
-
-                ivPlayOrPause.setOnClickListener {
-                    if (isPlayAudio) {
-                        sendActionToService(ACTION_PASSE)
-                    } else {
-                        sendActionToService(ACTION_RESUME)
-                    }
-                }
-
-                ivClose.setOnClickListener {
-                    sendActionToService(ACTION_CLEAR)
-                }
+            if (isPlayAudio) {
+                ivPlayOrPause.setImageResource(R.drawable.ic_circle_pause)
+            } else {
+                ivPlayOrPause.setImageResource(R.drawable.ic_circle_play)
             }
         }
     }
@@ -131,9 +118,19 @@ class PlaySoundFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun showInfoAudio() {
         binding.apply {
-            layoutControlAudio.apply {
-                tvNameAudio.text = audioModel.audio
-                tvNumber.text = "8 Item"
+            tvNameAudio.text = audioModel.audio
+            tvNumber.text = "8 Item"
+
+            ivPlayOrPause.setOnClickListener {
+                if (isPlayAudio) {
+                    sendActionToService(ACTION_PASSE)
+                } else {
+                    sendActionToService(ACTION_RESUME)
+                }
+            }
+
+            ivClose.setOnClickListener {
+                sendActionToService(ACTION_CLEAR)
             }
         }
     }

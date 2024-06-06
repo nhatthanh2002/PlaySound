@@ -77,7 +77,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="20dp"
                 android:layout_toStartOf="@id/ivClose"
-                android:src="@drawable/ic_circle_play"
+                android:src="@drawable/ic_circle_pause"
                 android:tint="@color/black"
                 tools:ignore="UseAppTint" />
 
