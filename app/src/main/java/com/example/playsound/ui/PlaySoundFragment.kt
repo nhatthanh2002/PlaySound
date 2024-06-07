@@ -25,6 +25,7 @@ import com.example.playsound.service.PlayAudioService.Companion.ACTION_CLEAR
 import com.example.playsound.service.PlayAudioService.Companion.ACTION_PASSE
 import com.example.playsound.service.PlayAudioService.Companion.ACTION_RESUME
 import com.example.playsound.service.PlayAudioService.Companion.ACTION_START
+import com.example.playsound.service.PlayAudioService.Companion.ACTION_STOP_SPECIFIC
 import com.example.playsound.service.PlayAudioService.Companion.AUDIO_ACTION_SERVICE
 import com.example.playsound.service.PlayAudioService.Companion.IS_PLAY_AUDIO
 import com.example.playsound.service.PlayAudioService.Companion.OBJECT_AUDIO
@@ -39,11 +40,12 @@ class PlaySoundFragment : Fragment() {
         const val NAME_AUDIO = "name_audio"
         const val AUDIO_MODEL = "audio_model"
         const val ACTION_AUDIO = "action_audio"
+        const val TOTAL_ITEM = "total_item"
     }
 
     private var isPlayAudio: Boolean = false
     private val viewModel: AudioViewModel by viewModels()
-    private val listAudio = ArrayList<AudioModel>()
+    private val listAudioCanPlay = ArrayList<AudioModel>()
     private lateinit var binding: FragmentPlaySoundBinding
     private lateinit var audioAdapter: AudioAdapter
     private val tabTitle = arrayListOf(
@@ -94,6 +96,7 @@ class PlaySoundFragment : Fragment() {
 
                 ACTION_CLEAR -> {
                     layoutControlAudio.visibility = View.GONE
+                    listAudioCanPlay.clear()
                 }
             }
         }
@@ -118,9 +121,10 @@ class PlaySoundFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun showInfoAudio() {
         binding.apply {
-            tvNameAudio.text = audioModel.audio
-            tvNumber.text = "8 Item"
-
+            viewModel.totalItem.observe(viewLifecycleOwner) {
+                tvNameAudio.text = "$it Vật phẩm"
+            }
+            tvNumber.text = "Kết hợp hiện tại"
             ivPlayOrPause.setOnClickListener {
                 if (isPlayAudio) {
                     sendActionToService(ACTION_PASSE)
@@ -143,6 +147,7 @@ class PlaySoundFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -154,11 +159,32 @@ class PlaySoundFragment : Fragment() {
         binding.apply {
             audioAdapter = AudioAdapter(
                 onClickItem = { model ->
-                    Toast.makeText(requireContext(), model.audio, Toast.LENGTH_SHORT)
-                        .show()
-                    val intent = Intent(requireActivity(), PlayAudioService::class.java)
-                    intent.putExtra(AUDIO_MODEL, model)
-                    requireActivity().startService(intent)
+                    val position = audioAdapter.currentList.indexOf(model)
+                    if (position != -1) {
+                        val intent = Intent(requireActivity(), PlayAudioService::class.java)
+                        model.isPlay = !model.isPlay
+                        if (listAudioCanPlay.size < 8) {
+                            if (model.isPlay) {
+                                listAudioCanPlay.add(model)
+                                Toast.makeText(requireContext(), model.audio, Toast.LENGTH_SHORT)
+                                    .show()
+                                intent.putExtra(AUDIO_MODEL, model)
+                                requireActivity().startService(intent)
+                            } else {
+                                listAudioCanPlay.remove(model)
+                                sendActionToService(ACTION_STOP_SPECIFIC)
+                                requireActivity().startService(intent)
+                            }
+                            viewModel.setTotalItem(listAudioCanPlay.size)
+                        } else {
+                            Toast.makeText(
+                                requireContext(),
+                                "Max can play is 8",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                        audioAdapter.updateItem(position, model)
+                    }
                 }
             )
 

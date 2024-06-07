@@ -5,7 +5,6 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.content.res.AssetFileDescriptor
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.IBinder
@@ -28,7 +27,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.IOException
 
-
 @Suppress("DEPRECATION")
 class PlayAudioService : Service() {
     companion object {
@@ -36,6 +34,7 @@ class PlayAudioService : Service() {
         const val ACTION_RESUME = 2
         const val ACTION_CLEAR = 3
         const val ACTION_START = 4
+        const val ACTION_STOP_SPECIFIC = 5 // New action for stopping a specific audio
         const val ACTION = "action"
         const val SEND_DATA_TO_ACTIVITY = "send_data_to_activity"
         const val IS_PLAY_AUDIO = "is_play_audio"
@@ -48,8 +47,8 @@ class PlayAudioService : Service() {
     private var isPlayingAudio: Boolean = false
     private var mAudioModel: AudioModel? = null
 
-    private val listNameAudio = ArrayList<String>()
-    private val listMediaPlayer = ArrayList<MediaPlayer>()
+    private val mediaPlayerMap = mutableMapOf<String, MediaPlayer>()
+
     override fun onBind(intent: Intent?): IBinder? {
         return null
     }
@@ -65,53 +64,51 @@ class PlayAudioService : Service() {
             mAudioModel = AudioModel()
         }
         val audioModel = intent?.getParcelableExtra<AudioModel>(AUDIO_MODEL)
+        Log.e("model1", audioModel.toString())
         if (audioModel != null) {
-            listNameAudio.add(audioModel.audio)
+            Log.e("ISPLAY", audioModel.isPlay.toString())
             mAudioModel = audioModel
             serviceScope.launch {
-                startAllAudio()
+                startAudio(audioModel.audio)
             }
         }
+        Log.e("model2", mAudioModel.toString())
         val actionAudio = intent?.getIntExtra(ACTION_AUDIO, 0)
-        actionAudio?.let { handleActionAudio(it) }
+        Log.e("name_audio_input", mAudioModel!!.audio)
+        actionAudio?.let { handleActionAudio(it, mAudioModel!!.audio) }
+        Log.e("model3", mAudioModel.toString())
+        Log.e("SIZE ITEM", mediaPlayerMap.size.toString())
+        Log.e("AUDIO_NAME_START_COMMAND", mAudioModel!!.audio)
 
         return START_STICKY
     }
 
-
-    private suspend fun startAllAudio() {
-        listMediaPlayer.forEach { mediaPlayer ->
-            mediaPlayer.reset()
-            mediaPlayer.release()
-        }
-        listMediaPlayer.clear()
-
+    private suspend fun startAudio(audioName: String) {
         withContext(Dispatchers.IO) {
-            listNameAudio.forEach { audioName ->
-                try {
-                    val mediaPlayer = MediaPlayer()
-                    val afd = assets.openFd("audio/${audioName}")
-                    mediaPlayer.apply {
-                        setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
-                        afd.close()
-                        isLooping = true
-                        prepare()
-                        start()
-                    }
-                    listMediaPlayer.add(mediaPlayer)
-                } catch (e: IOException) {
-                    e.printStackTrace()
+            try {
+                val mediaPlayer = MediaPlayer()
+                val afd = assets.openFd("audio/${audioName}")
+                mediaPlayer.apply {
+                    setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
+                    afd.close()
+                    isLooping = true
+                    prepare()
+                    start()
                 }
+                mediaPlayerMap[audioName] = mediaPlayer
+            } catch (e: IOException) {
+                e.printStackTrace()
             }
+
             withContext(Dispatchers.Main) {
                 isPlayingAudio = true
-                mAudioModel?.let { sendNotification(it) }
+                sendNotification()
                 sendActionToActivity(ACTION_START)
             }
         }
     }
 
-    private fun handleActionAudio(action: Int) {
+    private fun handleActionAudio(action: Int, audioName: String?) {
         when (action) {
             ACTION_PASSE -> {
                 pauseAudio()
@@ -125,39 +122,59 @@ class PlayAudioService : Service() {
                 sendActionToActivity(ACTION_CLEAR)
                 stopSelf()
             }
+
+            ACTION_STOP_SPECIFIC -> {
+                audioName?.let { stopSpecificAudio(it) }
+            }
+        }
+    }
+
+    private fun stopSpecificAudio(audioName: String) {
+        Log.e("AUDIO_NAME", audioName)
+        val mediaPlayer = mediaPlayerMap[audioName]
+        mediaPlayer?.let {
+            it.stop()
+            it.release()
+            mediaPlayerMap.remove(audioName)
+            Log.e("MapData", mediaPlayerMap.toString())
+            if (mediaPlayerMap.isEmpty()) {
+                isPlayingAudio = false
+                stopSelf()
+            }
+            sendNotification()
+            sendActionToActivity(ACTION_STOP_SPECIFIC)
         }
     }
 
     private fun resumeAudio() {
         if (!isPlayingAudio) {
-            listMediaPlayer.forEach { it.start() }
+            mediaPlayerMap.values.forEach { it.start() }
             isPlayingAudio = true
             sendActionToActivity(ACTION_RESUME)
-            mAudioModel?.let { sendNotification(it) }
+            sendNotification()
         }
     }
 
     private fun pauseAudio() {
         if (isPlayingAudio) {
-            listMediaPlayer.forEach { it.pause() }
+            mediaPlayerMap.values.forEach { it.pause() }
             isPlayingAudio = false
             sendActionToActivity(ACTION_PASSE)
-            mAudioModel?.let { sendNotification(it) }
+            sendNotification()
         }
     }
 
-
     @SuppressLint("ForegroundServiceType", "RemoteViewLayout")
-    private fun sendNotification(audioModel: AudioModel) {
+    private fun sendNotification() {
+        Log.e("sendNotification", "$mediaPlayerMap")
+        Log.e("MapItem", mediaPlayerMap.size.toString())
         val intent = Intent(this, MainActivity::class.java)
         val pendingIntent =
             PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-
         val remoteViews = RemoteViews(packageName, R.layout.layout_custom_notification).apply {
-            setTextViewText(R.id.tvNameAudioNoti, audioModel.audio)
-            setTextViewText(R.id.tvNumber, "8 item")
+            setTextViewText(R.id.tvNameAudioNoti, "${mediaPlayerMap.size} Vật phẩm")
+            setTextViewText(R.id.tvNumber, "Kết hợp hiện tại")
             setImageViewResource(R.id.ivPlayOrPause, R.drawable.ic_circle_pause)
-
 
             if (isPlayingAudio) {
                 setOnClickPendingIntent(
@@ -177,7 +194,6 @@ class PlayAudioService : Service() {
                 R.id.ivClose,
                 getPendingIntent(this@PlayAudioService, ACTION_CLEAR)
             )
-
         }
 
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
@@ -188,7 +204,6 @@ class PlayAudioService : Service() {
             .build()
 
         startForeground(1, notification)
-
     }
 
     private fun getPendingIntent(context: Context, action: Int): PendingIntent? {
@@ -214,8 +229,8 @@ class PlayAudioService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        listMediaPlayer.forEach { it.release() }
-        listMediaPlayer.clear()
+        mediaPlayerMap.values.forEach { it.release() }
+        mediaPlayerMap.clear()
         serviceJob.cancel()
     }
 }

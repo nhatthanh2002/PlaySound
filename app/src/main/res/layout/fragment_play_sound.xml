@@ -44,9 +44,9 @@
             android:id="@+id/layoutControlAudio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:layout_marginTop="8dp"
             android:background="@color/white"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,8 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                tools:text="name audio" />
+                tools:ignore="RelativeOverlap"
+                tools:text="Vật phẩm" />
 
             <TextView
                 android:id="@+id/tvNumber"
@@ -68,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvNameAudio"
                 android:layout_marginTop="3dp"
-                tools:text="number audio" />
+                tools:text="Kết hợp hiện tại" />
 
             <ImageView
                 android:id="@+id/ivPlayOrPause"

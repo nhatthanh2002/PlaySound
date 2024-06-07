@@ -21,14 +21,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvNameAudioNoti"
         android:layout_marginTop="3dp"
-        tools:text="number audio" />
+        tools:text="Kết hợp hiện tại " />
 
     <ImageView
         android:id="@+id/ivPlayOrPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
         android:layout_toStartOf="@id/ivClose"
         android:src="@drawable/ic_circle_pause"
         android:tint="@color/black"
@@ -38,10 +38,10 @@
         android:id="@+id/ivClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_close"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_close"
         android:tint="@color/black"
         tools:ignore="UseAppTint" />
 </RelativeLayout>

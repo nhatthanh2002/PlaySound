@@ -11,4 +11,5 @@ data class AudioModel(
     val image: String = "",
     val isPremium: Boolean = false,
     val offsetTimeToLoop: Int = 0,
+    var isPlay:Boolean = false
 ) : Parcelable
